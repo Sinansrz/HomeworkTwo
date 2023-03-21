@@ -365,7 +365,10 @@ hesaplayınız.</p>
 <pre><code>## [1] 44640</code></pre>
 <p><strong>Soru 2</strong> 3 8 1 4 1 5 9 2 6 12 42 sayılarını
 <em>toplama işareti kullanmadan</em> toplayınız.</p>
-<pre class="r"><code># Cevabınızı buraya yazınız!</code></pre>
+<pre class="r"><code>x&lt;-c(3,8,1,4,1,5,9,2,6,12,42)
+Toplam&lt;-sum(x)
+Toplam</code></pre>
+<pre><code>## [1] 93</code></pre>
 <p><strong>Soru 3</strong> <code>x</code> adında 1, 0.9, …, 0, -0.1, …,
 -0.9, -1 serisini içeren bir vektör yaratınız ve sonucu yazdırınız.</p>
 <pre class="r"><code>seq(-1, 1, by=0.1)</code></pre>
@@ -414,21 +417,35 @@ birinci elemanını yazdırınız.</p>
 <p><strong>Soru 7</strong> <code>wizards</code> vektöründeki Fred,
 George ve Sirius isimlerini Hermione, Ginny ve Malfoy isimleri ile
 değiştiriniz.</p>
-<pre class="r"><code># Cevabınızı buraya yazınız!</code></pre>
+<pre class="r"><code>wizards2 &lt;- replace(wizards, c(3,4,5), c(&quot;Hermione&quot;,&quot;Ginny&quot;,&quot;Malfoy&quot;))
+wizards2</code></pre>
+<pre><code>## [1] &quot;Harry&quot;    &quot;Ron&quot;      &quot;Hermione&quot; &quot;Ginny&quot;    &quot;Malfoy&quot;</code></pre>
 <p><strong>Soru 8</strong> Harry Potter okumamış biri bu karakterlerin
 kimler olduğunu bilmek için etiketlere ihtiyaç duyar.
 <code>wizards</code> vektörünün elemanlarına <strong>Lead</strong>,
 <strong>Friend</strong>, <strong>Friend</strong>, <strong>Wife</strong>
 ve <strong>Rival</strong> isimlerini veriniz. Sonuçları
 görüntüleyiniz.</p>
-<pre class="r"><code># Cevabınızı buraya yazınız!</code></pre>
+<pre class="r"><code>wizards3 &lt;- replace(wizards2, c(1,2,3,4,5),c(&quot;Lead&quot;,&quot;Friend&quot;,&quot;Friend&quot;,&quot;Wife&quot;,&quot;Rival&quot;))
+wizards3</code></pre>
+<pre><code>## [1] &quot;Lead&quot;   &quot;Friend&quot; &quot;Friend&quot; &quot;Wife&quot;   &quot;Rival&quot;</code></pre>
 <p><strong>Soru 9</strong> İstatistik II ara sınavına 27 öğrenci
 girmiştir. Bu öğrencilerin notları: 18, 95, 76, 90, 84, 83, 80, 79, 63,
 76, 55, 78, 90, 81, 42, 88, 89, 92, 73, 83, 72, 85, 66, 77, 82, 99 ve 87
 olmuştur. Sınav notlarını <code>scores</code> isimli bir vektöre
 kaydediniz. Sınav notlarının ortalama, medyan ve aralığını
 hesaplayınız.</p>
-<pre class="r"><code># Cevabınızı buraya yazınız!</code></pre>
+<pre class="r"><code>scores &lt;- c(18,95,76,90,84,83,80,79,63,76,55,78,90,81,42,88,89,92,73,83,72,85,66,77,82,99,87)
+
+Ortalama &lt;- mean(scores)
+Ortalama</code></pre>
+<pre><code>## [1] 77.14815</code></pre>
+<pre class="r"><code>Medyan &lt;- median(scores)
+Medyan</code></pre>
+<pre><code>## [1] 81</code></pre>
+<pre class="r"><code>Aralık &lt;- max(scores)-min(scores)
+Aralık</code></pre>
+<pre><code>## [1] 81</code></pre>
 <p><strong>Soru 10</strong> 2017’de Nilay’ın yıllık geliri 22000TL,
 toplam giderleri 3000TL’dir. 2018’de yıllık geliri 67000TL, toplam
 giderleri 23000TL’dir. 2019’da yıllık geliri 70000TL, toplam giderleri
@@ -438,7 +455,12 @@ giderleri 23000TL’dir. 2019’da yıllık geliri 70000TL, toplam giderleri
 farklı vektör yaratınız. Nilay’ın yıllık tasarruflarını hesaplayınız ve
 bu değerleri <code>savings</code> (tasarruflar) isimli bir vektöre
 kaydediniz.</p>
-<pre class="r"><code># Cevabınızı buraya yazınız!</code></pre>
+<pre class="r"><code>years&lt;-c(2017,2018,2019,2020)
+income&lt;-c(22000,67000,70000,72000)
+expenses&lt;-c(3000,23000,32000,35000)
+savings&lt;-c(income[1]-expenses[1],income[2]-expenses[2],income[3]-expenses[3],income[4]-expenses[4])
+savings</code></pre>
+<pre><code>## [1] 19000 44000 38000 37000</code></pre>
 
 
 
